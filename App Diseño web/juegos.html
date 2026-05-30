@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juegos</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="pagina">
+
+<h1>🎮 Atrapa la Moneda</h1>
+
+<div class="bloque">
+
+<p>Puntaje: <span id="score">0</span></p>
+
+<div id="game">
+<div id="player"></div>
+<div id="coin"></div>
+</div>
+
+</div>
+
+<a href="index.html" class="boton">
+⬅ Volver al Inicio
+</a>
+
+</div>
+
+<script>
+
+const player = document.getElementById("player");
+const coin = document.getElementById("coin");
+const scoreText = document.getElementById("score");
+
+let x = 50;
+let y = 50;
+let score = 0;
+
+coin.style.left = "220px";
+coin.style.top = "180px";
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="ArrowUp") y-=10;
+if(e.key==="ArrowDown") y+=10;
+if(e.key==="ArrowLeft") x-=10;
+if(e.key==="ArrowRight") x+=10;
+
+x=Math.max(0,Math.min(x,280));
+y=Math.max(0,Math.min(y,280));
+
+player.style.left=x+"px";
+player.style.top=y+"px";
+
+const coinX=parseInt(coin.style.left);
+const coinY=parseInt(coin.style.top);
+
+if(Math.abs(x-coinX)<20 && Math.abs(y-coinY)<20){
+
+score++;
+
+scoreText.textContent=score;
+
+coin.style.left=
+Math.floor(Math.random()*280)+"px";
+
+coin.style.top=
+Math.floor(Math.random()*280)+"px";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

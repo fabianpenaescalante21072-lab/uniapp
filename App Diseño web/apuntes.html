@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apuntes</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<div class="pagina">
+
+<h1>📖 Mis Apuntes</h1>
+
+<div class="bloque">
+
+<h2>✍️ Bloc de Notas</h2>
+
+<p>
+Guarda aquí tus resúmenes, fórmulas, tareas o recordatorios.
+</p>
+
+<br>
+
+<textarea
+id="apunte"
+class="apunte-grande"
+placeholder="Empieza a escribir tus apuntes aquí..."
+></textarea>
+
+<br>
+
+<button onclick="guardarApunte()">
+💾 Guardar Apunte
+</button>
+
+<p id="mensaje"></p>
+
+</div>
+
+<a href="index.html" class="boton">
+⬅ Volver al Inicio
+</a>
+
+</div>
+
+<script>
+
+function guardarApunte(){
+
+let texto =
+document.getElementById("apunte").value;
+
+localStorage.setItem(
+"misApuntes",
+texto
+);
+
+document.getElementById("mensaje").innerHTML =
+"✅ Apunte guardado correctamente";
+
+}
+
+window.onload = function(){
+
+let guardado =
+localStorage.getItem("misApuntes");
+
+if(guardado){
+
+document.getElementById("apunte").value =
+guardado;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

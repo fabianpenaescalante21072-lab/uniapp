@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#eef2ff;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.card{
+    background:white;
+    text-decoration:none;
+    color:black;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.icono{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+}
+
+.pagina{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.bloque{
+    background:white;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.boton{
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+}
+
+.boton:hover{
+    background:#1d4ed8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    margin-top:10px;
+}
+
+textarea{
+    min-height:220px;
+    resize:none;
+}
+
+button{
+    margin-top:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#resultado{
+    margin-top:25px;
+    padding:25px;
+    min-height:180px;
+
+    background:#dbeafe;
+
+    border-left:6px solid #2563eb;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    white-space:pre-line;
+}
+
+#mensaje{
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+
+#game{
+    width:300px;
+    height:300px;
+    background:white;
+    border:3px solid #2563eb;
+    border-radius:15px;
+    margin:20px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+#player{
+    width:20px;
+    height:20px;
+    background:#2563eb;
+    position:absolute;
+    left:50px;
+    top:50px;
+    border-radius:5px;
+}
+
+#coin{
+    width:20px;
+    height:20px;
+    background:gold;
+    border-radius:50%;
+    position:absolute;
+}
+.apunte-grande{
+
+    width:100%;
+
+    min-height:550px;
+
+    padding:20px;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    background:#f8fafc;
+
+    border:2px solid #dbeafe;
+
+    border-radius:15px;
+
+}
+
+.apunte-grande:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+}
+
+#mensaje{
+
+    margin-top:15px;
+
+    color:green;
+
+    font-weight:bold;
+
+}

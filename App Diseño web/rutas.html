@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rutas</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<div class="pagina">
+
+<h1>📍 Navegación del Campus</h1>
+
+<div class="bloque">
+
+<h2>¿A dónde quieres ir?</h2>
+
+<br>
+
+<select id="destino">
+
+<option>Biblioteca</option>
+
+<option>Laboratorio</option>
+
+<option>Cafetería</option>
+
+<option>Auditorio</option>
+
+</select>
+
+<br><br>
+
+<button onclick="mostrarRuta()">
+🚶 Mostrar Ruta
+</button>
+
+<div id="resultado">
+
+Selecciona un destino y presiona "Mostrar Ruta".
+
+</div>
+
+</div>
+
+<a href="index.html" class="boton">
+⬅ Volver al Inicio
+</a>
+
+</div>
+
+<script>
+
+function mostrarRuta(){
+
+let lugar =
+document.getElementById("destino").value;
+
+let texto = "";
+
+if(lugar=="Biblioteca"){
+
+texto =
+"📚 BIBLIOTECA\n\n🚶 Camina recto 50 metros.\n⬅ Gira a la izquierda.\n✅ Has llegado.";
+
+}
+
+if(lugar=="Laboratorio"){
+
+texto =
+"🧪 LABORATORIO\n\n🚶 Ve al segundo piso.\n➡ Sigue el pasillo principal.\n✅ Has llegado.";
+
+}
+
+if(lugar=="Cafetería"){
+
+texto =
+"☕ CAFETERÍA\n\n🚶 Camina hacia el patio central.\n➡ Gira a la derecha.\n✅ Has llegado.";
+
+}
+
+if(lugar=="Auditorio"){
+
+texto =
+"🏛️ AUDITORIO\n\n🚶 Sigue el corredor principal.\n⬅ Entra por la puerta grande.\n✅ Has llegado.";
+
+}
+
+document.getElementById("resultado").innerText =
+texto;
+
+}
+
+</script>
+
+</body>
+</html>
